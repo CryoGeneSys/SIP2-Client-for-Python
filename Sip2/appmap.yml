@@ -1,0 +1,5 @@
+appmap_dir: tmp\appmap
+language: python
+name: Sip2
+packages:
+- path: Sip2

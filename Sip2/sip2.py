@@ -137,11 +137,11 @@ class Sip2:
         """Public SIP variables (saved for various requests) """
         self.language       = '000'
         # @var string      Language code (000 = default, 001 == english)
-        self.institutionId  = 'My Test Institute'
+        self.institutionId  = ''
         # @var string      Value for the AO field
         self.terminalPassword     = ''
         # @var string      Terminal password (AC)
-        self.scLocation     = 'My Test SC Location'
+        self.scLocation     = ''
         # @var string l    Location code (AP "location code" / CP "current location")
         self.patron         = ''
         # @var string      Patron identifier (AA)
@@ -622,7 +622,7 @@ class Sip2:
                 # This might be a bit tricky should a CRC really ever fail.
                 # Most likely it's best to indicate that a reconnect probably is
                 # the best choice bei raising a ConnectionError.
-                raise ConnectionError('Connection error: Failed to get valid CRC for response') from e
+                raise ConnectionError('Connection error: Failed to get valid CRC for response')
                 #return False
 
         # Keep last message and response as property
